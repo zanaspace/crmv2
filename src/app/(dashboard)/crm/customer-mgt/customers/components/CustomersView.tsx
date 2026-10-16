@@ -150,7 +150,7 @@ export function CustomersView() {
             >
               {s.label}
               <span className={`min-w-6 px-1.5 py-0.5 rounded-full text-[0.72rem] font-bold ${
-                alert ? "bg-[rgba(239,68,68,.12)] text-[var(--destructive)]" : active ? "bg-[var(--accent)] text-[var(--accent-foreground)]" : "bg-[var(--card)]/60 text-[var(--muted-foreground)]"
+                alert ? "bg-[var(--bad-s)] text-[var(--destructive)]" : active ? "bg-[var(--accent)] text-[var(--accent-foreground)]" : "bg-[var(--card)]/60 text-[var(--muted-foreground)]"
               }`}>
                 {count}
               </span>

@@ -41,7 +41,7 @@ const TRIGGER =
 const LIST = "min-w-[180px] max-h-[240px] overflow-y-auto bg-[var(--card)] text-[var(--foreground)] border border-[var(--border)] rounded-md shadow-lg z-50";
 
 const OPTION = "px-3 py-2 text-[0.85rem] cursor-pointer rounded transition-colors text-[var(--foreground)]";
-const OPTION_SELECTED = "bg-[rgba(242,169,59,0.08)] text-[var(--primary)] font-semibold";
+const OPTION_SELECTED = "bg-[var(--accent-soft)] text-[var(--primary)] font-semibold";
 
 /**
  * Single-choice dropdown. Value-based API (`onChange(value)`), controlled when `value` is passed.
@@ -104,7 +104,7 @@ export function Select({ options, placeholder = "Select...", value, onChange, cl
               value={toItem(opt)}
               className={cn(
                 OPTION,
-                "pl-3 pr-8 focus:bg-[var(--accent)] focus:text-[var(--accent-foreground)] data-[state=checked]:bg-[rgba(242,169,59,0.08)] data-[state=checked]:text-[var(--primary)] data-[state=checked]:font-semibold [&_svg:not([class*='text-'])]:text-[var(--primary)]",
+                "pl-3 pr-8 focus:bg-[var(--accent)] focus:text-[var(--accent-foreground)] data-[state=checked]:bg-[var(--accent-soft)] data-[state=checked]:text-[var(--primary)] data-[state=checked]:font-semibold [&_svg:not([class*='text-'])]:text-[var(--primary)]",
               )}
             >
               {opt}

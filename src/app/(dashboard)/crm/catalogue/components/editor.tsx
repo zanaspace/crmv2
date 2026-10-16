@@ -207,7 +207,7 @@ export function OfferPreview({ eyebrow, name, prices, model, features, trialDays
   const annual = amountOf(prices, currency, "ANNUALLY");
   const saving = monthly && annual ? Math.round((1 - annual / (monthly * 12)) * 100) : 0;
   return (
-    <div className={cn("rounded-2xl border-[1.5px] p-6 bg-[var(--card)] relative", recommended ? "border-[var(--primary)] shadow-[0_8px_24px_rgba(242,169,59,0.18)]" : "border-[var(--border)]")}>
+    <div className={cn("rounded-2xl border-[1.5px] p-6 bg-[var(--card)] relative", recommended ? "border-[var(--primary)] shadow-[0_8px_24px_-12px_rgba(12,26,46,0.28)]" : "border-[var(--border)]")}>
       {recommended && <span className="absolute -top-3 left-6 px-3 py-0.5 rounded-full bg-[var(--primary)] text-[var(--primary-foreground)] text-[0.7rem] font-bold uppercase tracking-wide">Recommended</span>}
       <div className="text-[0.75rem] font-bold text-[var(--muted-foreground)] uppercase tracking-wider">{eyebrow}</div>
       <div className="font-heading font-extrabold text-[1.3rem] mt-1">{name || "Plan name"}</div>

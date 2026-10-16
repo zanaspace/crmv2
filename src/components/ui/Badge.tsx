@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils"
 import { Badge as BadgePrimitive } from "@/components/ui/primitives/badge"
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: "default" | "success" | "warning" | "destructive" | "info" | "secondary" | "muted";
+  variant?: "default" | "success" | "warning" | "destructive" | "info" | "pick" | "secondary" | "muted";
 }
 
 const VARIANTS: Record<NonNullable<BadgeProps["variant"]>, string> = {
@@ -12,6 +12,8 @@ const VARIANTS: Record<NonNullable<BadgeProps["variant"]>, string> = {
   warning: "bg-[var(--warn-s)] text-[var(--warn)]",
   destructive: "bg-[var(--bad-s)] text-[var(--bad)]",
   info: "bg-[var(--info-s)] text-[var(--info)]",
+  /** Tier / qualified / demo (style guide: specialized state). */
+  pick: "bg-[var(--pick-s)] text-[var(--pick)]",
   secondary: "bg-[var(--secondary)] text-[var(--secondary-foreground)]",
   muted: "bg-[var(--muted)] text-[var(--muted-foreground)]",
 };

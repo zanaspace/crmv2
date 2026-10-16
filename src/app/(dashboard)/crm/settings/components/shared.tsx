@@ -19,7 +19,7 @@ export function Tabs<T extends string>({ tabs, value, onChange, label, counts, u
             className={cn("px-4 py-2 rounded-md font-heading font-semibold text-[0.85rem] transition-all whitespace-nowrap flex items-center gap-2", active ? "bg-[var(--card)] text-[var(--foreground)] shadow-sm" : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]")}>
             {t.label}
             {n !== undefined && (
-              <span className={cn("min-w-6 px-1.5 py-0.5 rounded-full text-[0.72rem] font-bold", urgent.includes(t.id) && n > 0 ? "bg-[rgba(245,158,11,.15)] text-[var(--warning)]" : active ? "bg-[var(--accent)] text-[var(--accent-foreground)]" : "bg-[var(--card)]/60")}>{n}</span>
+              <span className={cn("min-w-6 px-1.5 py-0.5 rounded-full text-[0.72rem] font-bold", urgent.includes(t.id) && n > 0 ? "bg-[var(--warn-s)] text-[var(--warning)]" : active ? "bg-[var(--accent)] text-[var(--accent-foreground)]" : "bg-[var(--card)]/60")}>{n}</span>
             )}
           </button>
         );

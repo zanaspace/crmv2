@@ -61,7 +61,7 @@ function PricingContent({ plans, bundles }: { plans: Plan[]; bundles: Bundle[] }
         </div>
         <label className="flex items-center gap-2 text-[0.85rem] font-semibold cursor-pointer">
           <input type="checkbox" checked={gapsOnly} onChange={(e) => setGapsOnly(e.target.checked)} className="w-4 h-4 accent-[var(--primary)]" />
-          Only show rows with gaps <span className="px-1.5 rounded-full bg-[rgba(245,158,11,.15)] text-[var(--warning)] text-[0.75rem] font-bold">{gapCount}</span>
+          Only show rows with gaps <span className="px-1.5 rounded-full bg-[var(--warn-s)] text-[var(--warning)] text-[0.75rem] font-bold">{gapCount}</span>
         </label>
       </div>
 

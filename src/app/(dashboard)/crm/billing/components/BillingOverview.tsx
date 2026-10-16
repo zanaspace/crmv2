@@ -85,7 +85,7 @@ function Overview({ payments, customers, policies, pauses }: { payments: Payment
   const tiles = [
     { label: "Collected", value: formatMoney(sum(by("Paid"))), sub: `${by("Paid").length} payments`, icon: CheckCircle2, tone: "text-[var(--success)] bg-[rgba(31,157,115,.1)]", href: "/crm/billing/payments?status=Paid" },
     { label: "Failed", value: formatMoney(sum(by("Failed"))), sub: `${by("Failed").length} orders still unpaid`, icon: XCircle, tone: "text-[var(--destructive)] bg-[rgba(239,68,68,.1)]", href: "/crm/billing/payments?status=Failed" },
-    { label: "Pending", value: formatMoney(sum(by("Pending"))), sub: `${by("Pending").length} awaiting confirmation`, icon: Clock, tone: "text-[var(--warning)] bg-[rgba(245,158,11,.12)]", href: "/crm/billing/payments?status=Pending" },
+    { label: "Pending", value: formatMoney(sum(by("Pending"))), sub: `${by("Pending").length} awaiting confirmation`, icon: Clock, tone: "text-[var(--warning)] bg-[var(--warn-s)]", href: "/crm/billing/payments?status=Pending" },
     { label: "Overdue now", value: String(overdue.length), sub: `${formatMoney(overdue.reduce((t, x) => t + monthlyValue(x.c, bundles, plans), 0))}/mo at risk`, icon: AlertCircle, tone: "text-[var(--destructive)] bg-[rgba(239,68,68,.1)]", href: "/crm/billing/collections" },
     { label: "Recovery rate", value: `${recovery}%`, sub: `${recovered.length} of ${everFailed.length} failed orders later paid`, icon: RotateCcw, tone: "text-[var(--info)] bg-[rgba(59,130,246,.1)]", href: "/crm/billing/payments?status=Paid" },
   ];

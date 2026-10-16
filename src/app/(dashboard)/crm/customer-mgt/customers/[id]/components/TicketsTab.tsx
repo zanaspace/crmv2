@@ -69,7 +69,7 @@ export function TicketsTab() {
                   <td className="px-6 py-4 text-[0.85rem] text-[var(--muted-foreground)] whitespace-nowrap">{t.queueType}</td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className={`text-[0.75rem] font-bold uppercase tracking-wider ${
-                      t.priority === 'Critical' ? 'text-[var(--destructive)]' : 'text-[#F59E0B]'
+                      t.priority === 'Critical' ? 'text-[var(--destructive)]' : 'text-[var(--warn)]'
                     }`}>
                       {t.priority}
                     </span>

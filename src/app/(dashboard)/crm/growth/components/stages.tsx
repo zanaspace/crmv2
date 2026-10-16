@@ -20,9 +20,10 @@ import { stageFrom } from "./stageUtils";
 
 const DOT: Record<StageTone, string> = {
   info: "bg-[var(--info)]",
+  pick: "bg-[var(--pick)]",
   warning: "bg-[var(--warning)]",
   success: "bg-[var(--success)]",
-  secondary: "bg-[var(--secondary)] border border-[var(--border)]",
+  secondary: "bg-[var(--primary)]",
   muted: "bg-[var(--muted-foreground)]",
   destructive: "bg-[var(--destructive)]",
 };

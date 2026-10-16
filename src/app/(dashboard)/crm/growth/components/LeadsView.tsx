@@ -120,7 +120,7 @@ export function LeadsView() {
               <button key={v.id} role="tab" aria-selected={active} onClick={() => setParams({ view: v.id })}
                 className={cn("px-4 py-2 rounded-md font-heading font-semibold text-[0.85rem] transition-all whitespace-nowrap flex items-center gap-2", active ? "bg-[var(--card)] text-[var(--foreground)] shadow-sm" : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]")}>
                 {v.label}
-                <span className={cn("min-w-6 px-1.5 py-0.5 rounded-full text-[0.72rem] font-bold", urgent ? "bg-[rgba(245,158,11,.15)] text-[var(--warning)]" : active ? "bg-[var(--accent)] text-[var(--accent-foreground)]" : "bg-[var(--card)]/60")}>{counts[v.id]}</span>
+                <span className={cn("min-w-6 px-1.5 py-0.5 rounded-full text-[0.72rem] font-bold", urgent ? "bg-[var(--warn-s)] text-[var(--warning)]" : active ? "bg-[var(--accent)] text-[var(--accent-foreground)]" : "bg-[var(--card)]/60")}>{counts[v.id]}</span>
               </button>
             );
           })}

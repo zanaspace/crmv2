@@ -52,7 +52,7 @@ export function StatusDropdown({ status, onChange, options = ["Active", "Pending
                 // The CRM highlights the current status with a tint instead of a radio dot.
                 "px-3 py-1.5 text-[0.8rem] font-medium cursor-pointer rounded transition-colors [&>span:first-child]:hidden",
                 "text-[var(--foreground)] focus:bg-[var(--accent)] focus:text-[var(--accent-foreground)]",
-                "data-[state=checked]:bg-[rgba(242,169,59,0.08)] data-[state=checked]:text-[var(--primary)]",
+                "data-[state=checked]:bg-[var(--accent-soft)] data-[state=checked]:text-[var(--primary)]",
               )}
             >
               {opt}

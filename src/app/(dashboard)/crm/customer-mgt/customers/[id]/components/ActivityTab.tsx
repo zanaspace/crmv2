@@ -11,11 +11,11 @@ import { usePermissions } from "@/lib/permissions";
 
 const KIND = {
   note: { icon: StickyNote, tone: "bg-[var(--accent)] text-[var(--primary)]" },
-  status: { icon: ShieldAlert, tone: "bg-[rgba(239,68,68,.12)] text-[var(--destructive)]" },
+  status: { icon: ShieldAlert, tone: "bg-[var(--bad-s)] text-[var(--destructive)]" },
   lifecycle: { icon: Flag, tone: "bg-[rgba(59,130,246,.12)] text-[var(--info)]" },
-  payment: { icon: CreditCard, tone: "bg-[rgba(31,157,115,.12)] text-[var(--success)]" },
-  invoice: { icon: Receipt, tone: "bg-[rgba(31,157,115,.12)] text-[var(--success)]" },
-  ticket: { icon: Ticket, tone: "bg-[rgba(245,158,11,.12)] text-[var(--warning)]" },
+  payment: { icon: CreditCard, tone: "bg-[var(--ok-s)] text-[var(--success)]" },
+  invoice: { icon: Receipt, tone: "bg-[var(--ok-s)] text-[var(--success)]" },
+  ticket: { icon: Ticket, tone: "bg-[var(--warn-s)] text-[var(--warning)]" },
   created: { icon: UserPlus, tone: "bg-[var(--muted)] text-[var(--muted-foreground)]" },
 } satisfies Record<ActivityItem["kind"], { icon: React.ElementType; tone: string }>;
 

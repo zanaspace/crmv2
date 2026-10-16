@@ -132,7 +132,7 @@ export function PaymentsView() {
         {([
           { s: "Paid", label: "Collected", icon: CheckCircle2, tone: "text-[var(--success)] bg-[rgba(31,157,115,.1)]" },
           { s: "Failed", label: "Failed", icon: XCircle, tone: "text-[var(--destructive)] bg-[rgba(239,68,68,.1)]" },
-          { s: "Pending", label: "Pending", icon: Clock, tone: "text-[var(--warning)] bg-[rgba(245,158,11,.12)]" },
+          { s: "Pending", label: "Pending", icon: Clock, tone: "text-[var(--warning)] bg-[var(--warn-s)]" },
           { s: "Refunded", label: "Refunded", icon: Undo2, tone: "text-[var(--muted-foreground)] bg-[var(--muted)]" },
         ] as const).map((t) => (
           <button key={t.s} onClick={() => setParams({ status: status === t.s ? null : t.s })} aria-pressed={status === t.s}
@@ -288,7 +288,7 @@ function PaymentDrawer({ payment: p, customer: c, sub, onClose }: { payment: Pay
           <li key={a.gatewayRef + i} className="flex gap-4">
             <div className="flex flex-col items-center">
               <span className={cn("w-8 h-8 rounded-full flex items-center justify-center shrink-0",
-                a.status === "Paid" ? "bg-[rgba(31,157,115,.12)] text-[var(--success)]" : a.status === "Failed" ? "bg-[rgba(239,68,68,.12)] text-[var(--destructive)]" : "bg-[rgba(245,158,11,.12)] text-[var(--warning)]")}>
+                a.status === "Paid" ? "bg-[var(--ok-s)] text-[var(--success)]" : a.status === "Failed" ? "bg-[var(--bad-s)] text-[var(--destructive)]" : "bg-[var(--warn-s)] text-[var(--warning)]")}>
                 {a.status === "Paid" ? <CheckCircle2 className="w-4 h-4" /> : a.status === "Failed" ? <XCircle className="w-4 h-4" /> : <Clock className="w-4 h-4" />}
               </span>
               {i < arr.length - 1 && <span className="w-px flex-1 bg-[var(--border)] my-1" />}

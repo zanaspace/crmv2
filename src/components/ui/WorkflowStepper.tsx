@@ -19,7 +19,7 @@ export function WorkflowStepper() {
       
       {/* The glowing orange track */}
       <div aria-hidden className="absolute top-[48px] left-0 w-full px-12 z-0">
-        <div className="h-1 bg-[var(--primary)] shadow-[0_0_15px_3px_rgba(242,169,59,0.5)] w-full"></div>
+        <div className="h-1 bg-[var(--primary)] w-full"></div>
       </div>
 
       <ol aria-label="Workflow steps" className="flex items-start justify-between relative z-10 px-4">
@@ -31,7 +31,7 @@ export function WorkflowStepper() {
             <li key={index} className="flex flex-col items-center text-center w-24">
               
               {/* Glowing Node */}
-              <div aria-hidden className="w-5 h-5 rounded-full bg-[var(--primary)] mb-5 shadow-[0_0_20px_5px_rgba(242,169,59,0.4)] relative">
+              <div aria-hidden className="w-5 h-5 rounded-full bg-[var(--primary)] mb-5 ring-4 ring-[var(--accent-soft)] relative">
                 <div className="absolute inset-0 bg-white/30 rounded-full"></div>
               </div>
               

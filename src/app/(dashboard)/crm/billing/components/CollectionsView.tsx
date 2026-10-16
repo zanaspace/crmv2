@@ -116,7 +116,7 @@ export function CollectionsView() {
             <button key={st.id} role="tab" aria-selected={active} onClick={() => setParam("stage", st.id)}
               className={`px-3 py-2 rounded-md font-heading font-semibold text-[0.82rem] transition-all whitespace-nowrap flex items-center gap-1.5 ${active ? "bg-[var(--card)] text-[var(--foreground)] shadow-sm" : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"}`}>
               {st.label}
-              <span className={`min-w-6 px-1.5 py-0.5 rounded-full text-[0.72rem] font-bold ${urgent ? "bg-[rgba(239,68,68,.12)] text-[var(--destructive)]" : active ? "bg-[var(--accent)] text-[var(--accent-foreground)]" : "bg-[var(--card)]/60"}`}>{n}</span>
+              <span className={`min-w-6 px-1.5 py-0.5 rounded-full text-[0.72rem] font-bold ${urgent ? "bg-[var(--bad-s)] text-[var(--destructive)]" : active ? "bg-[var(--accent)] text-[var(--accent-foreground)]" : "bg-[var(--card)]/60"}`}>{n}</span>
             </button>
           );
         })}

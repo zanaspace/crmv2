@@ -5,7 +5,7 @@ import { formatPhone, initials } from "@/lib/format";
 import type { Customer } from "@/lib/mock/customers";
 
 const ROLE_STYLE = {
-  Admin: { badge: "secondary" as const, avatar: "bg-[rgba(242,169,59,0.15)] text-[var(--primary)]" },
+  Admin: { badge: "secondary" as const, avatar: "bg-[var(--accent-soft)] text-[var(--primary)]" },
   Technical: { badge: "info" as const, avatar: "bg-[rgba(59,130,246,0.15)] text-[var(--info)]" },
   Billing: { badge: "success" as const, avatar: "bg-[rgba(31,157,115,0.15)] text-[var(--success)]" },
 };

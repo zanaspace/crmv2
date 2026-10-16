@@ -94,7 +94,7 @@ export function ConfirmDialog({ isOpen, onClose, onConfirm, title, description, 
     >
       <div className="flex flex-col gap-4">
         {icon && (
-          <div className={`w-12 h-12 rounded-full flex items-center justify-center ${tone === "danger" ? "bg-[rgba(239,68,68,.12)] text-[var(--destructive)]" : "bg-[var(--accent)] text-[var(--primary)]"}`}>
+          <div className={`w-12 h-12 rounded-full flex items-center justify-center ${tone === "danger" ? "bg-[var(--bad-s)] text-[var(--destructive)]" : "bg-[var(--accent)] text-[var(--primary)]"}`}>
             {icon}
           </div>
         )}

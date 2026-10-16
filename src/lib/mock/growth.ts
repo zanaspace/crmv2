@@ -8,9 +8,10 @@ import { lastAttemptAt, paymentsStore, paymentStatus } from "@/lib/mock/billing"
 /* ================= Pipeline ================= */
 
 /** Badge tones a stage can use (the shared Badge variants). */
-export type StageTone = "info" | "warning" | "success" | "secondary" | "muted" | "destructive";
+export type StageTone = "info" | "pick" | "warning" | "success" | "secondary" | "muted" | "destructive";
 export const STAGE_TONES: { tone: StageTone; name: string }[] = [
   { tone: "info", name: "Blue" },
+  { tone: "pick", name: "Purple" },
   { tone: "warning", name: "Amber" },
   { tone: "success", name: "Green" },
   { tone: "secondary", name: "Navy" },
@@ -26,9 +27,9 @@ export const MAX_STAGES = 8;
 
 const DEFAULT_STAGES: PipelineStage[] = [
   { id: "new", label: "New", tone: "info" },
-  { id: "contacted", label: "Contacted", tone: "info" },
+  { id: "contacted", label: "Contacted", tone: "pick" },
   { id: "presentation", label: "Presentation", tone: "warning" },
-  { id: "proposal", label: "Proposal", tone: "warning" },
+  { id: "proposal", label: "Proposal", tone: "secondary" },
 ];
 
 /** The open stages, in order. Teams can add, rename, recolour, reorder and remove them. */

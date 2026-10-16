@@ -74,7 +74,7 @@ export function PartnersView() {
           return (
             <button key={v.id} role="tab" aria-selected={view === v.id} onClick={() => setParam("view", v.id)}
               className={cn("flex-1 justify-center px-4 py-2 rounded-md font-heading font-semibold text-[0.85rem] flex items-center gap-2", view === v.id ? "bg-[var(--card)] shadow-sm text-[var(--foreground)]" : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]")}>
-              {v.label}<span className={cn("min-w-6 px-1.5 py-0.5 rounded-full text-[0.72rem] font-bold", v.id === "queue" && n ? "bg-[rgba(245,158,11,.15)] text-[var(--warning)]" : "bg-[var(--card)]/60")}>{n}</span>
+              {v.label}<span className={cn("min-w-6 px-1.5 py-0.5 rounded-full text-[0.72rem] font-bold", v.id === "queue" && n ? "bg-[var(--warn-s)] text-[var(--warning)]" : "bg-[var(--card)]/60")}>{n}</span>
             </button>
           );
         })}
