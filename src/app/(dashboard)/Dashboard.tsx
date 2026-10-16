@@ -61,9 +61,9 @@ function DashboardContent({ header, customers, plans, bundles }: { header: React
 
   const overdue = seg("overdue");
   const tiles = [
-    { id: "overdue", label: "Renewals overdue", count: overdue.length, sub: `${formatMoney(overdue.reduce((s, c) => s + value(c), 0))}/mo at risk`, icon: AlertCircle, tone: "text-[var(--destructive)] bg-[rgba(239,68,68,.1)]" },
-    { id: "trial_ending", label: "Trials ending this week", count: seg("trial_ending").length, sub: "Convert before they lapse", icon: Clock, tone: "text-[var(--warning)] bg-[rgba(245,158,11,.12)]" },
-    { id: "onboarding", label: "Onboarding stuck", count: seg("onboarding").length, sub: "Open for 14+ days", icon: Flag, tone: "text-[var(--info)] bg-[rgba(59,130,246,.1)]" },
+    { id: "overdue", label: "Renewals overdue", count: overdue.length, sub: `${formatMoney(overdue.reduce((s, c) => s + value(c), 0))}/mo at risk`, icon: AlertCircle, tone: "text-[var(--bad)] bg-[var(--bad-s)]" },
+    { id: "trial_ending", label: "Trials ending this week", count: seg("trial_ending").length, sub: "Convert before they lapse", icon: Clock, tone: "text-[var(--warn)] bg-[var(--warn-s)]" },
+    { id: "onboarding", label: "Onboarding stuck", count: seg("onboarding").length, sub: "Open for 14+ days", icon: Flag, tone: "text-[var(--info)] bg-[var(--info-s)]" },
     { id: "suspended", label: "Suspended", count: seg("suspended").length, sub: "No access to CICOD apps", icon: Ban, tone: "text-[var(--muted-foreground)] bg-[var(--muted)]" },
   ];
 

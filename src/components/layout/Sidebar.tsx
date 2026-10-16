@@ -35,7 +35,7 @@ function NavAccordionItem({ title, icon: Icon, defaultOpen = false, children, is
         }}
         className={`w-full flex items-center ${isCollapsed ? 'justify-center' : 'justify-between'} px-3 py-2.5 rounded-lg transition-colors cursor-pointer ${
           isOpen && !isCollapsed
-            ? "text-[var(--sidebar-accent-foreground)] bg-[var(--accent)] font-heading font-semibold"
+            ? "text-[var(--sidebar-accent-foreground)] bg-[var(--accent-soft)] font-heading font-semibold"
             : "text-[var(--sidebar-foreground)] hover:bg-[var(--sidebar-accent)] hover:text-[var(--sidebar-accent-foreground)] font-medium"
         }`}
       >
@@ -68,7 +68,7 @@ function NavLinkItem({ group, active, isCollapsed }: { group: NavGroup; active: 
         aria-current={active ? "page" : undefined}
         className={`flex items-center ${isCollapsed ? "justify-center" : ""} gap-3 px-3 py-2.5 rounded-lg transition-colors ${
           active
-            ? "text-[var(--sidebar-accent-foreground)] bg-[var(--accent)] font-heading font-semibold"
+            ? "text-[var(--sidebar-accent-foreground)] bg-[var(--accent-soft)] font-heading font-semibold border-l-[3.5px] border-[var(--brand)] shadow-sm"
             : "text-[var(--sidebar-foreground)] hover:bg-[var(--sidebar-accent)] hover:text-[var(--sidebar-accent-foreground)] font-medium"
         }`}
       >
@@ -85,12 +85,17 @@ function SubLink({ href, children, active }: { href: string; children: React.Rea
       <Link
         href={href}
         aria-current={active ? "page" : undefined}
-        className={`block py-1.5 text-[0.88rem] font-medium transition-colors truncate ${
+        className={`flex items-center py-1.5 text-[0.88rem] font-medium transition-colors truncate ${
           active
             ? "text-[var(--primary)] font-heading font-semibold"
             : "text-[var(--sidebar-foreground)] hover:text-[var(--sidebar-accent-foreground)]"
         }`}
       >
+        {active ? (
+          <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand)] inline-block mr-2 shrink-0 shadow-[0_0_6px_rgba(242,169,59,0.5)]" />
+        ) : (
+          <span className="w-1.5 h-1.5 rounded-full bg-transparent inline-block mr-2 shrink-0" />
+        )}
         {children}
       </Link>
     </li>

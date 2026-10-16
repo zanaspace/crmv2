@@ -8,10 +8,10 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const VARIANTS: Record<NonNullable<BadgeProps["variant"]>, string> = {
   default: "bg-[var(--primary)] text-[var(--primary-foreground)]",
-  success: "bg-[rgba(31,157,115,.12)] text-[var(--success)]",
-  warning: "bg-[rgba(245,158,11,.12)] text-[var(--warning)]",
-  destructive: "bg-[rgba(239,68,68,.12)] text-[var(--destructive)]",
-  info: "bg-[rgba(59,130,246,.12)] text-[var(--info)]",
+  success: "bg-[var(--ok-s)] text-[var(--ok)]",
+  warning: "bg-[var(--warn-s)] text-[var(--warn)]",
+  destructive: "bg-[var(--bad-s)] text-[var(--bad)]",
+  info: "bg-[var(--info-s)] text-[var(--info)]",
   secondary: "bg-[var(--secondary)] text-[var(--secondary-foreground)]",
   muted: "bg-[var(--muted)] text-[var(--muted-foreground)]",
 };
